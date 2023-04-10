@@ -237,6 +237,7 @@ a {
 @media (max-width: 768px) {
   #navbar {
     height: 180px;
+    position: static;
   }
 
   #navbar-container {
