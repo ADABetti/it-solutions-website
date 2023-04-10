@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 60px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  background-color: #111;
+  color: #eee;
+  border-radius: 5px;
+  transition: background 500ms ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #000;
+}
+
+.headline {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 50px;
+  letter-spacing: 2px;
+}
+
+/*navbar*/
+#navbar {
+  width: 100%;
+  height: 70px;
+  background-color: #111;
+  color: #eee;
+  position: fixed;
+}
+
+#navbar-container {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+#navbar-menu {
+  text-transform: uppercase;
+  display: flex;
+  list-style-type: none;
+  gap: 25px;
+}
+
+#navbar-menu a {
+  padding: 20px;
+}
+
+/*Showcase*/
+#showcase {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+  background: url(images/showcase.jpg) no-repeat center center/cover;
+
+  /*Overlay*/
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: color;
+}
+
+#showcase-container {
+  text-align: center;
+}
+
+#showcase-container h2 {
+  font-size: 2.5rem;
+}
+
+#showcase-container p {
+  padding: 7px 0;
+  font-size: 1.2rem;
+}
+
+/*Clientes*/
+#clients {
+  width: 100%;
+  padding: 50px;
+  background-color: #eee;
+  color: #111;
+}
+
+#clients-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.client-image {
+  display: inline-block;
+  width: 25%;
+}
+
+/*About*/
+#features {
+  width: 100%;
+  padding: 50px;
+  background-color: #111;
+  color: #eee;
+}
+
+#features-container {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+}
+
+.feature {
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/*Product*/
+#product {
+  padding: 50px;
+  width: 100%;
+}
+
+#product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#product-items {
+  width: 650px;
+}
+
+#product-items .item {
+  margin: 15px 0;
+  padding: 10px;
+  font-size: 1.2rem;
+  display: flex;
+}
+
+/*Testimonials*/
+#testimonials {
+  padding: 50px;
+  width: 100%;
+  background-color: #222;
+  color: #eee;
+}
+
+#testimonials-container {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial {
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #333;
+}
+
+.testimonial .testimonial-image {
+  margin: 0 15px 0 0;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/*Gallery*/
+#gallery {
+  width: 90%;
+  margin: auto;
+  padding: 50px;
+}
+
+#gallery-container {
+  display: flex;
+
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+}
+
+/*Footer*/
+#footer-container {
+  margin: auto;
+  padding: 30px;
+  background-color: #111;
+  color: #eee;
+  font-size: small;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #navbar {
+    height: 180px;
+  }
+
+  #navbar-container {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+
+  #navbar-menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  #showcase {
+    padding: 20px;
+  }
+
+  #clients-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .client {
+    width: 50%;
+  }
+
+  #features-container {
+    grid-template-columns: 1fr;
+  }
+
+  #features-container .feature:nth-child(2) {
+    margin: 15px 0;
+  }
+
+  #product-container {
+    flex-direction: column;
+  }
+
+  #product-items {
+    margin: auto;
+    width: 90%;
+  }
+
+  .item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+  }
+} ;
